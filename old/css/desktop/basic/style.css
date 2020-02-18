@@ -1,0 +1,668 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    scroll-behavior: smooth;
+}
+
+.home {
+    position: relative;
+    background-color: black;
+    background-image: url("../../../imgs/background.jpg"); 
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home > .lang-container {
+    position: absolute;
+    z-index: 1;
+    right: 5rem;
+    top: 2rem;
+}
+
+.home > .lang-container > .lang > a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: .25rem;
+    color: white;
+    text-decoration: none;
+}
+
+.home > .lang-container > .lang > a:hover {
+    transition: .3s all;
+    color: red;
+}
+
+.home > .title-container {
+    position: relative;
+    padding: 4rem;
+    top: 0rem;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.home > .title-container > p:nth-child(1) {
+    display: none;
+    position: absolute;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.home > .title-container > p:nth-child(2) {
+    float: left;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.home > .title-container > p:nth-child(3){
+    position: absolute;
+    float: left;
+    top: 8rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.home > #iphone-image{
+    position: absolute;
+    bottom: -2rem;
+    right: 28%;
+    z-index: 1; 
+}
+
+.home > #iphone-image > img {
+    position: relative;
+    width: 7rem;
+    z-index: 2;
+}
+
+.home > #iphone-image::before{
+    position: absolute;
+    content: '';
+    z-index: 1;
+    width: 91%;
+    height: 100%;
+    top: 1.69rem;
+    left: .2rem;
+    background-image: url("../../../imgs/screen-iphone.jpg"); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    opacity: 1;
+}
+
+.home > #desktop-image{
+    position: absolute;
+    width: 30rem;
+    bottom: -2rem;
+    right: 4%;
+    z-index: 1;
+}
+
+.home > #desktop-image > img {
+    width: 30rem;
+    z-index: 2;
+}
+
+.home > #desktop-image::before{
+    position: absolute;
+    content: '';
+    background: white;
+    background-image: url("../../../imgs/screen.jpg"); 
+    background-size: 110%;
+    background-repeat: round;
+    background-position-y: 10px;
+    z-index: -1;
+    top: .5rem;
+    left: .5rem;
+    width: 97%;
+    height: 70%;
+    border-radius: 2rem;
+}
+
+.home > #find-out-more {
+    position: absolute;
+    bottom: 6rem;
+    left: 4rem;
+    width: 25rem;
+}
+
+.home > #find-out-more > p {
+    position: relative;
+    color: white;  
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.second-page {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.second-page::-webkit-scrollbar {
+    display: none;
+}
+.second-page > .nav {
+    margin: 1rem auto 0 auto;
+    text-align: center;
+}
+
+.second-page > .nav > a {
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.second-page > .nav > a:hover{
+    transition: .3s all;
+    color: red;
+}
+
+.second-page > .nav > .active {
+    color: red;
+}
+
+
+.second-page > .second-page-container {
+    
+}
+/* ---- VISIBLE CLASSES ---- */
+
+.second-page > .second-page-container > .invisible{
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* ---- INVISIBLE CLASSES ---- 
+
+.second-page > .second-page-container > .invisible {
+    display: none !important;
+}
+
+.second-page > .second-page-container > .invisible {
+    display: none !important;
+}
+
+
+/* ---- ABOUT SUBPAGE ---- */
+
+.second-page > .second-page-container > .about {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4rem;
+    display: grid;
+    width: 100vw;
+    padding: 4rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "aboutme contact";
+    grid-gap: 10rem;
+    transition: .2s all;
+
+}
+
+.second-page > .second-page-container > .about > .about-me{
+    position: relative;
+    grid-area: aboutme;
+    text-align: left;
+    text-align: justify;
+    color: black;
+    margin-top: -1rem;
+}
+
+.second-page > .second-page-container > .about > .about-me > p:nth-child(1){
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 0 0 1.5rem 0;
+}
+
+.second-page > .second-page-container > .about > .about-me > p:nth-child(2){
+    font-size: 1.25rem;
+    padding: 0 0 1.25rem 0;
+}
+
+.second-page > .second-page-container > .about > .about-me > p:nth-child(3){
+    font-size: 1.25rem;
+    padding: 0 0 .5rem 0;
+}
+
+.second-page > .second-page-container > .about > .about-me > p:nth-child(4){
+    font-size: 1.25rem;
+}
+
+.second-page > .second-page-container > .about > .about-me > p:nth-child(5){
+    font-size: 1.25rem;
+}
+
+.second-page > .second-page-container > .about > .contact{
+    position: relative;
+    grid-area: contact;
+    text-align: left;
+    text-align: justify;
+    color: black;
+    margin-top: -2rem;
+}
+
+.second-page > .second-page-container > .about > .contact > .info-container {
+    position: relative;
+    padding: 1rem;
+    height: 6rem;
+    background-color: rgb(241, 241, 241);
+    border-radius: 1.25rem;
+    margin-top: 1rem;
+
+}
+
+.second-page > .second-page-container > .about > .contact > .info-container > .fa {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1.25rem;
+    width: 5rem;
+    height: 5rem;
+    margin-top: -.5rem;
+}
+
+.second-page > .second-page-container > .about > .contact > .info-container > a {
+    display: block;
+    width: 20rem;
+    height: 5rem;
+    float: left;
+    color: black;
+    padding: 1.25rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+/* ---- WEBSITES SUBPAGE ---- */
+
+
+.second-page > .second-page-container > .websites {
+    position: relative;
+    margin: 0 auto 0 auto;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 5rem;
+    align-items: center;
+}
+
+.second-page > .second-page-container > .websites > .example-container{
+    position: relative;
+    color: black;
+    margin-top: 1.25rem !important;
+    margin: 0 auto 0 auto;
+    width: 30rem;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+
+.second-page > .second-page-container > .websites > .example-container > p{
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+
+}
+
+.second-page > .second-page-container > .websites > .example-container > img{
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.second-page > .second-page-container > .websites > .example-container > a{
+    display: block;
+    text-decoration: none;  /* changes were made here */
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: .5rem;
+    color: rgb(44, 44, 44);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.26);
+}
+
+
+/* WEBSITES PROJECTS SUBPAGE */
+
+.second-page > .second-page-container > .websites-projects {
+    position: relative;
+    margin: 0 auto 0 auto;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 5rem;
+    align-items: center;
+}
+
+
+.second-page > .second-page-container > .websites-projects > .example-container {
+    position: relative;
+    color: black;
+    margin-top: 1.25rem;
+    width: 26.5rem;
+    height: 15rem;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
+
+    margin: 0 auto 0 auto;
+}
+
+.second-page > .second-page-container > .websites-projects > .example-container > img {
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+} 
+
+.second-page > .second-page-container > .websites-projects > .example-container > p {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1.25rem;
+    width: 100%;
+    background-color: white;
+}
+
+/* ---- SKILLS SUBPAGE ---- */
+
+.second-page > .second-page-container > .skills { 
+    display: grid;
+    grid-template-areas: "programming software";
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2.5rem;
+}
+
+
+.second-page > .second-page-container > .skills > .programming-area > {
+    grid-area: software;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container {
+    position: relative;
+    margin: 1rem auto 5rem auto;
+    width: 30rem;
+
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > p {
+    padding: .4rem 0;
+    font-weight: 700;
+
+}   
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #html{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #css{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #javascript{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #jquery{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #php{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #mysql{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #sass{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > #reactjs{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background: blue; 
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > .experience-levels { 
+    position: absolute;
+    top: 3.5rem;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > .experience-levels > p {
+    float: left; 
+    padding: 0 7.4rem 0 0;
+}
+
+.second-page > .second-page-container > .skills > .programming-area > .example-container > .experience-levels > p:last-child {
+    padding: 0 !important;
+}
+
+
+.second-page > .second-page-container > .skills > .software-area > {
+    grid-area: software;
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container {
+    position: relative;
+    margin: 1rem auto 5rem auto;
+    width: 30rem;
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > p {
+    padding: .4rem 0;
+    font-weight: 700;
+
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > #aps{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > #aai{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > #aid{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > #excel{
+    position: absolute;
+    content: "";
+    width: 0rem;
+    height: 1rem;
+    background:  rgb(90, 90, 255);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > .experience-levels { 
+    position: absolute;
+    top: 3.5rem;
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > .experience-levels > p {
+    float: left; 
+    padding: 0 7.4rem 0 0;
+}
+
+.second-page > .second-page-container > .skills > .software-area > .example-container > .experience-levels > p:last-child {
+    padding: 0 !important;
+}
+
+/* ---- CAREER SUBPAGE ---- */
+
+.second-page > .second-page-container > .career {
+    position: relative;
+    margin-top: 4.5rem;
+}
+
+.second-page > .second-page-container > .career > .example-container {
+    position: relative;
+    margin: 1rem auto 2rem auto;
+    width: 40rem;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.383);
+}
+
+.second-page > .second-page-container > .career > .example-container > .company-logo > img {
+    padding: 1rem;
+    width: 8rem;
+}
+
+.second-page > .second-page-container > .career > .example-container > .position {
+    position: absolute;
+    top: 1rem;
+    left: 8rem;
+}
+
+.second-page > .second-page-container > .career > .example-container > .position > p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.second-page > .second-page-container > .career > .example-container > .company-name {
+    position: absolute;
+    top: 3.5rem;
+    left: 8rem;
+}
+
+.second-page > .second-page-container > .career > .example-container > .company-name > a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.712);
+}
+
+.second-page > .second-page-container > .career > .example-container > .time-period {
+    position: absolute;
+    top: 5.9rem;
+    left: 8rem;
+}
+
+.second-page > .second-page-container > .career > .example-container > .description {
+    padding: 1rem;
+}
+
+.second-page > .second-page-container > .other {
+    padding: 1.5rem;
+}
+
+.second-page > .second-page-container > .other > .example-container {
+
+}
+
+.second-page > .second-page-container > .other > .example-container > p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: .5rem;
+}
+
+.second-page > .second-page-container > .other > .example-container > #game-demo {
+
+}
