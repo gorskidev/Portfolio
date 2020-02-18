@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "portfolio",
+    "maciek",
+    "gorski",
+    "dev",
+    "web",
+    "developer",
+    "programmer"
+  ],
+  "author": "Maciej Górski",
+  "license": "ISC"
+}
