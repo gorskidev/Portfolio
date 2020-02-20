@@ -16,8 +16,16 @@ document.addEventListener("scroll", () => {
         // Header
         document.querySelector("#introduction > .container > .header").style.top = "0rem";
         document.querySelector("#introduction > .container > .header").style.position = "fixed";
-        document.querySelector("#introduction > .container > .header").style.background = "blue";
+        document.querySelector("#introduction > .container > .header").style.background = "white";
+        document.querySelector("#introduction > .container > .header").style.color = "black";
 
+        // Header > Menu
+        document.querySelector("#introduction > .container > .header > #home").style.color = "black";
+        let menuBlock = document.querySelectorAll(".menu > a");
+        for(let i = 0; i < menuBlock.length; i++){
+            menuBlock[i].style.color = "black";
+        }
+        
         // Menu
         document.querySelector(".menu").style.marginRight = "-4rem";
 
@@ -30,6 +38,15 @@ document.addEventListener("scroll", () => {
         document.querySelector("#introduction > .container > .header").style.background = "";
         document.querySelector("#introduction > .container > .header").style.top = "0rem";
         document.querySelector("#introduction > .container > .header").style.position = "absolute";
+        document.querySelector("#introduction > .container > .header").style.color = "white";
+
+        // Menu
+        document.querySelector("#introduction > .container > .header > #home").style.color = "white";
+        let menuBlock = document.querySelectorAll(".menu > a");
+        for(let i = 0; i < menuBlock.length; i++){
+            menuBlock[i].style.color = "white";
+        }
+
 
         // Menu 
         document.querySelector(".menu").style.marginRight = "-1rem";
@@ -86,7 +103,6 @@ document.querySelector("#bw-button").addEventListener("click", () => {
         for(let i = 0; i < x.length; i++){
             x[i].style.background = "gray";
         }
-
 
         darkMode = true;
     }else{

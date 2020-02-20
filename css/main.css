@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -20,7 +20,7 @@
 
 #introduction > .container {
     position: relative;
-   /* padding: 1rem; */
+    /* padding: 1rem; */
     display: inline-block;
     transition: .5s all;
     width: 70%;
@@ -34,14 +34,21 @@
     z-index: 9999;
 }
 
-#introduction > .container > .header > #bw-button{
+#introduction > .container > .header > #home {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: white;
+}
+
+#introduction > .container > .header > #bw-button {
     padding-left: 2rem;
     cursor: pointer;
 }
 
 .menu {
     float: right;
-    padding-top: .5rem;
+    margin-top: -.5rem;
     margin-right: -1rem;
     transition: 1s all;
 }
@@ -258,7 +265,7 @@
     font-weight: 800;
 }
 
-#contact > .container{
+#contact > .container {
     max-width: 80rem;
     padding: 0 10rem;
     margin: 0 auto;
@@ -271,7 +278,7 @@
     padding: 0 0 2rem 0;
 }
 
-#contact > .container > .contact-box{
+#contact > .container > .contact-box {
     max-width: 50rem;
     margin: 0 auto;     
     padding: 1rem;
@@ -287,7 +294,7 @@
     letter-spacing: 1pt;
 }
 
-footer{
+footer {
     width: 100%;
     padding: 2rem 0 1rem 0;
     text-align: center;
