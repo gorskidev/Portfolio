@@ -3,6 +3,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
+    transition: color .1s, background-color .5s, background-image .5s;
 }
 
 #introduction {
@@ -19,21 +20,53 @@
 
 #introduction > .container {
     position: relative;
-    padding: 1rem;
+   /* padding: 1rem; */
     display: inline-block;
-    transition: .3s all;
+    transition: .5s all;
     width: 70%;
+}
+
+#introduction > .container > .header {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    transition: 1s top;
+    z-index: 9999;
+}
+
+#introduction > .container > .header > #bw-button{
+    padding-left: 2rem;
+    cursor: pointer;
 }
 
 .menu {
     float: right;
-    color: white;
+    padding-top: .5rem;
+    margin-right: -1rem;
+    transition: 1s all;
 }
 
 .menu > a {
-    padding: 1rem;
+    margin: 1rem;
     text-decoration: none;
     color: white;
+}
+
+.menu > #arrow {
+    display: inline-block;
+    cursor: pointer;
+    background: white;
+    text-align: center;
+    padding: .5rem;
+    margin: auto;
+}
+
+.menu > #arrow > .fa {
+    color: black;
+    font-weight: 900;
+    width: 2rem;
+    text-align: center;
+    transition: .3s all;
 }
 
 #hero {
@@ -76,6 +109,7 @@
     color: black;
     padding: 0 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+    z-index: 0;
 }
 
 .slide-bar > .header {
@@ -165,13 +199,14 @@
 }
 
 #about > .container {
-    max-width: 80rem;
+    max-width: 70rem;
     padding: 0 10rem;
     margin: 0 auto;
 }
 
 #about > .container > .header {
     font-size: 1.75rem;
+    padding: 1rem 0;
 }
 
 #about > .container > .header > .title {
@@ -186,14 +221,74 @@
 
 #about > .container > .description {
     display: block;
-    padding: 2rem 0;
     width: auto;
     height: 10rem;
-    
+    line-height: 1.75rem;
+    letter-spacing: .5pt;
+    margin: .5rem 0 3rem 0;
 }
 
 #about > .container > .description > img {
     padding-left: 1rem;
     float: right;
     max-width: 150px;
+}
+
+#about > .container > .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 1rem;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+#about > .container > .grid > .grid-block > img {
+    max-width: 50px;
+}
+
+#contact {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;;
+}
+
+#contact > .header {
+    padding: 2rem 5rem;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+#contact > .container{
+    max-width: 80rem;
+    padding: 0 10rem;
+    margin: 0 auto;
+}
+
+#contact > .container > .header > .title {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 0 2rem 0;
+}
+
+#contact > .container > .contact-box{
+    max-width: 50rem;
+    margin: 0 auto;     
+    padding: 1rem;
+}
+
+#contact > .container > .contact-box > a {
+    display: block;
+    background: rgb(243, 243, 243);
+    color: black;
+    margin: 1rem;
+    padding: .75rem;
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 1);
+    letter-spacing: 1pt;
+}
+
+footer{
+    width: 100%;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
 }
