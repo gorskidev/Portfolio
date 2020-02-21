@@ -3,6 +3,10 @@ let darkMode = false;
 
 let currentScroll = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
+// Contact box
+const contactBoxA = document.querySelectorAll("#contact > .container > .contact-box > a");
+// Header
+const menuButtons = document.querySelectorAll(".menu > a");
 
 document.addEventListener("scroll", () => {
     // Scroll
@@ -16,14 +20,20 @@ document.addEventListener("scroll", () => {
         // Header
         document.querySelector("#introduction > .container > .header").style.top = "0rem";
         document.querySelector("#introduction > .container > .header").style.position = "fixed";
-        document.querySelector("#introduction > .container > .header").style.background = "white";
-        document.querySelector("#introduction > .container > .header").style.color = "black";
-
-        // Header > Menu
-        document.querySelector("#introduction > .container > .header > #home").style.color = "black";
-        let menuBlock = document.querySelectorAll(".menu > a");
-        for(let i = 0; i < menuBlock.length; i++){
-            menuBlock[i].style.color = "black";
+        
+        if(darkMode == false){ // Dark mode OFF
+            document.querySelector("#introduction > .container > .header").style.background = "white";
+            document.querySelector("#introduction > .container > .header").style.color = "black";
+            document.querySelector("#introduction > .container > .header > #home").style.color = "black";
+            document.querySelector("#introduction > .container > .header").style.boxShadow = "0 0 15px rgb(0, 0, 0, 0.1)";
+            for(let i = 0; i < menuButtons.length; i++){
+                menuButtons[i].style.color = "black";
+            }
+        }else{ // Dark mode ON
+            document.querySelector("#introduction > .container > .header").style.background = "black";
+            document.querySelector("#introduction > .container > .header").style.color = "white";
+            document.querySelector("#introduction > .container > .header > #home").style.color = "white";
+            document.querySelector("#introduction > .container > .header").style.boxShadow = "0 0 25px rgb(255, 255, 255, 0.2)";
         }
         
         // Menu
@@ -33,20 +43,18 @@ document.addEventListener("scroll", () => {
     }else if(currentScroll >= 250 && currentScroll <= 400) {
         document.querySelector("#introduction > .container > .header").style.top = "-4rem";
     }else if(currentScroll > 0 && currentScroll < 250) { 
-
         // Header
         document.querySelector("#introduction > .container > .header").style.background = "";
         document.querySelector("#introduction > .container > .header").style.top = "0rem";
         document.querySelector("#introduction > .container > .header").style.position = "absolute";
         document.querySelector("#introduction > .container > .header").style.color = "white";
-
+        document.querySelector("#introduction > .container > .header").style.boxShadow = "0 0 15px rgb(0, 0, 0, 0)";
         // Menu
         document.querySelector("#introduction > .container > .header > #home").style.color = "white";
         let menuBlock = document.querySelectorAll(".menu > a");
         for(let i = 0; i < menuBlock.length; i++){
             menuBlock[i].style.color = "white";
         }
-
 
         // Menu 
         document.querySelector(".menu").style.marginRight = "-1rem";
@@ -55,30 +63,94 @@ document.addEventListener("scroll", () => {
 
 // Slidebar
 document.querySelector("#arrow").addEventListener("click", () => {
-    if(currentScroll < 500){
+    if(currentScroll < 400){
         if(visible === false){
             // Container
             document.querySelector("#introduction > .container").style.width = "100%";
 
             // Arrow
-            document.querySelector(".fa-angle-left").style.transform = "rotate(180deg)";
+            document.querySelector(".fa-angle-right").style.transform = "rotate(180deg)";
             visible = true;
         }else{
             // Container
             document.querySelector("#introduction > .container").style.width = "70%";
 
             // Arrow
-            document.querySelector(".fa-angle-left").style.transform = "rotate(360deg)";
+            document.querySelector(".fa-angle-right").style.transform = "rotate(360deg)";
             visible = false;
         }
     }
 })
+
+// Menu animations
+let current = {
+    projects : false,
+    about : false,
+    contact : false
+}
+
+document.querySelector(".menu > #nav-projects").addEventListener("click", () => {
+    if(darkMode == true){
+        document.querySelector(".menu > #nav-projects").style.color = "red";
+        document.querySelector(".menu > #nav-about").style.color = "white";
+        document.querySelector(".menu > #nav-contact").style.color = "white";
+    }else{
+        document.querySelector(".menu > #nav-projects").style.color = "red";
+        document.querySelector(".menu > #nav-about").style.color = "black";
+        document.querySelector(".menu > #nav-contact").style.color = "black";
+    }
+    current.projects = true;
+    current.about = false;
+    current.contact = false;
+});
+
+document.querySelector(".menu > #nav-about").addEventListener("click", () => {
+    if(darkMode == true){
+        document.querySelector(".menu > #nav-projects").style.color = "white";
+        document.querySelector(".menu > #nav-about").style.color = "red";
+        document.querySelector(".menu > #nav-contact").style.color = "white";
+    }else{
+        document.querySelector(".menu > #nav-projects").style.color = "black";
+        document.querySelector(".menu > #nav-about").style.color = "red";
+        document.querySelector(".menu > #nav-contact").style.color = "black";
+    }
+    current.projects = false;
+    current.about = true;
+    current.contact = false;
+});
+
+document.querySelector(".menu > #nav-contact").addEventListener("click", () => {
+    if(darkMode == true){
+        document.querySelector(".menu > #nav-projects").style.color = "white";
+        document.querySelector(".menu > #nav-about").style.color = "white";
+        document.querySelector(".menu > #nav-contact").style.color = "red";
+    }else{
+        document.querySelector(".menu > #nav-projects").style.color = "black";
+        document.querySelector(".menu > #nav-about").style.color = "black";
+        document.querySelector(".menu > #nav-contact").style.color = "red";
+    }
+    current.projects = false;
+    current.about = false;
+    current.contact = true;
+});
 
 // Dark mode
 document.querySelector("#bw-button").addEventListener("click", () => {
     if(darkMode === false){
         // Background image
         document.querySelector("#introduction").style.backgroundImage = "url(C:/xampp/htdocs/develop/portfolio/imgs/background_dark.png)"
+
+        // Menu
+        if(currentScroll > 400){
+            document.querySelector("#introduction > .container > .header > #home").style.color = "white";
+            document.querySelector("#introduction > .container > .header").style.background = "black";
+            document.querySelector("#introduction > .container > .header").style.color = "white";
+            for(let i = 0; i < menuButtons.length; i++){
+                menuButtons[i].style.color = "white";
+            }
+        }
+
+        document.querySelector("#bw-button").innerHTML = '<i class="fa fa-adjust"></i> light mode';
 
         // Slide bar toggle button
         document.querySelector("#arrow").style.background = "black";
@@ -89,25 +161,35 @@ document.querySelector("#bw-button").addEventListener("click", () => {
         document.querySelector(".slide-bar").style.color = "white";
 
         // Projects
-        document.querySelector("#projects").style.background = "black";
+        document.querySelector("#projects").style.background = "#353535";
         document.querySelector("#projects").style.color = "white";
 
         // About 
-        document.querySelector("#about").style.background = "gray";
-        document.querySelector("#about").style.color = "black";
+        document.querySelector("#about").style.background = "#A1A1A1";
+        document.querySelector("#about").style.color = "#F6F6F6";
 
         // Contact
         document.querySelector("#contact").style.background = "black";
         document.querySelector("#contact").style.color = "white";
-        let x = document.querySelectorAll("#contact > .container > .contact-box > a");
-        for(let i = 0; i < x.length; i++){
-            x[i].style.background = "gray";
+
+        for(let i = 0; i < contactBoxA.length; i++){
+            contactBoxA[i].style.background = "#DADADA";
+            contactBoxA[i].style.color = "#3B3B3B";
         }
 
         darkMode = true;
     }else{
         // Background image
         document.querySelector("#introduction").style.backgroundImage = "url(C:/xampp/htdocs/develop/portfolio/imgs/background.jpg)"
+
+        // Menu
+        if(currentScroll > 400){
+            document.querySelector("#introduction > .container > .header").style.background = "white";
+            document.querySelector("#introduction > .container > .header").style.color = "black";
+            document.querySelector("#introduction > .container > .header > #home").style.color = "black";
+
+        }
+        document.querySelector("#bw-button").innerHTML = '<i class="fa fa-adjust"></i> dark mode';
 
         // Slide bar toggle button
         document.querySelector("#arrow").style.background = "white";
@@ -126,9 +208,10 @@ document.querySelector("#bw-button").addEventListener("click", () => {
         // Contact
         document.querySelector("#contact").style.background = "white";
         document.querySelector("#contact").style.color = "black";
-        let x = document.querySelectorAll("#contact > .container > .contact-box > a");
-        for(let i = 0; i < x.length; i++){
-            x[i].style.background = "white";
+
+        for(let i = 0; i < contactBoxA.length; i++){
+            contactBoxA[i].style.background = "white";
+            contactBoxA[i].style.color = "black";
         }
         darkMode = false;
     }
