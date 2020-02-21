@@ -323,7 +323,7 @@ footer {
         display: block;
         height: auto;
         overflow: hidden;
-        background-image: url(C:/xampp/htdocs/develop/portfolio/imgs/background.jpg);
+        background-image: url(imgs/background.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         color: white;
