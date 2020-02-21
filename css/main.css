@@ -23,7 +23,7 @@
     /* padding: 1rem; */
     display: inline-block;
     transition: .5s all;
-    width: 70%;
+    width: 100%;
 }
 
 #introduction > .container > .header {
@@ -132,7 +132,7 @@
 .slide-bar > a {
     display: block;
     margin-top: 1rem;
-    line-height: 2rem;
+    line-height: 1.7rem;
 }
 
 .slide-bar > img {
@@ -304,4 +304,318 @@ footer {
     width: 100%;
     padding: 2rem 0 1rem 0;
     text-align: center;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 1024px){
+    * {
+        font-family: 'Raleway', sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        margin: 0;
+        transition: color .1s, background-color .5s, background-image .5s;
+    }
+    
+    #introduction {
+        position: relative;
+        display: block;
+        height: auto;
+        overflow: hidden;
+        background-image: url(C:/xampp/htdocs/develop/portfolio/imgs/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+    }
+    
+    #introduction > .container {
+        position: relative;
+        /* padding: 1rem; */
+        display: inline-block;
+        transition: .5s all;
+        width: 100%;
+    }
+    
+    #introduction > .container > .header {
+        position: absolute;
+        width: 100%;
+        padding: 1rem;
+        transition: top 1s, box-shadow .5s;
+        z-index: 9999;
+        box-shadow: 0 0 15px rgb(0, 0, 0, 0);
+    }
+    
+    #introduction > .container > .header > #home {
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 900;
+        color: white;
+    }
+    
+    #introduction > .container > .header > #bw-button {
+        padding-left: 2rem;
+        cursor: pointer;
+        transition: all 0.001s step-end;
+    }
+    
+    .menu {
+        display: none;
+        float: right;
+        margin-top: -.5rem;
+        margin-right: -1rem;
+        transition: 1s all;
+    }
+    
+    .menu > a {
+        margin: 1rem;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .menu > #arrow {
+        display: inline-block;
+        cursor: pointer;
+        background: white;
+        text-align: center;
+        padding: .5rem;
+        margin: auto;
+    }
+    
+    .menu > #arrow > .fa {
+        color: black;
+        font-weight: 900;
+        width: 2rem;
+        text-align: center;
+        transition: .3s all;
+    }
+    
+    #hero {
+        margin-top: 10rem;
+        margin-left: 2rem;
+    }
+    
+    #hero > h1:nth-of-type(1) {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    
+    #hero > h1:nth-of-type(2) {
+        font-weight: 800;
+        font-size: 3rem;
+    }
+    
+    #projects-carousel {
+        display: block;
+        margin-left: 2rem;
+        margin-top: 5rem;
+        width: 10rem;
+    }
+    
+    #projects-carousel > a {
+        display: block;
+        font-size: 1.25rem;
+    }
+    
+    #projects-carousel > img {
+        padding: 1rem 0;
+        display: block;
+        max-width: 250px;
+    }
+    
+    .slide-bar {
+        position: absolute;
+        display: none;
+        width: 30%;
+        margin-left: 0rem;
+        background: white;
+        height: 100%;
+        color: black;
+        padding: 0 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+        z-index: 0;
+    }
+    
+    .slide-bar > .header {
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+    
+    .slide-bar > a {
+        display: block;
+        margin-top: 1rem;
+        line-height: 1.7rem;
+    }
+    
+    .slide-bar > img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        float: right;
+        shape-outside: circle();
+        margin: 1rem 0 1rem;
+    }
+    
+    .slide-bar > .header {
+        margin-top: 1rem;
+    }
+    
+    .slide-bar > .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .slide-bar > .grid > .grid-block {
+        padding-top: 1rem;
+    }
+    
+    #projects {
+        max-width: 100rem;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+    }
+    
+    #projects > .header {
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    
+    #projects > .grid {
+        display: grid;
+        padding: 0 0rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 4rem;
+    }
+    
+    #projects > .grid > .grid-block {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    #projects > .grid > .grid-block > a.title {
+        font-weight: 500;
+        display: block;
+        padding: 0 0 .75rem 0rem;
+    }
+    
+    #projects > .grid > .grid-block > a {
+        display: block;
+        padding: .75rem 0 0 0;
+    }
+    
+    #projects > .grid > .grid-block > img {
+        display: block;
+        max-width: 200px;
+    }
+    
+    #about {
+        max-width: 100rem;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+        background: rgb(240, 240, 240);
+        transition: color .1s;
+    }
+    
+    #about > .header {
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    
+    #about > .container {
+        max-width: 70rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+    
+    #about > .container > .header {
+        font-size: 1.75rem;
+        padding: 1rem 0;
+    }
+    
+    #about > .container > .header > .title {
+        display: block;
+        font-weight: 500;   
+    }
+    
+    #about > .container > .header > .subtitle {
+        display: block;
+        font-weight: 200;   
+    }
+    
+    #about > .container > .description {
+        display: block;
+        width: auto;
+        height: 10rem;
+        line-height: 1.75rem;
+        letter-spacing: .5pt;
+        margin: .5rem 0 17rem 0;
+    }
+    
+    #about > .container > .description > img {
+        padding-left: 1rem;
+        float: right;
+        max-width: 150px;
+    }
+    
+    #about > .container > .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-gap: 1rem;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    #about > .container > .grid > .grid-block > img {
+        max-width: 50px;
+    }
+    
+    #contact {
+        max-width: 100rem;
+        margin: 0 auto;
+        padding-bottom: 2rem;;
+    }
+    
+    #contact > .header {
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    
+    #contact > .container {
+        max-width: 80rem;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+    
+    #contact > .container > .header > .title {
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 0 2rem 0;
+    }
+    
+    #contact > .container > .contact-box {
+        max-width: 50rem;
+        margin: 0 auto;     
+        padding: 1rem;
+    }
+    
+    #contact > .container > .contact-box > a {
+        display: block;
+        background: rgb(243, 243, 243);
+        color: black;
+        margin: 1rem;
+        padding: .75rem;
+        box-shadow: inset 0 0 1px rgba(0, 0, 0, 1);
+        letter-spacing: 1pt;
+    }
+    
+    footer {
+        width: 100%;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+    }
 }
