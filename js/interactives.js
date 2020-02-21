@@ -144,7 +144,7 @@ if(window.innerWidth > 1024){
 document.querySelector("#bw-button").addEventListener("click", () => {
     if(darkMode === false){
         // Background image
-        document.querySelector("#introduction").style.backgroundImage = "url(C:/xampp/htdocs/develop/portfolio/imgs/background_dark.png)"
+        document.querySelector("#introduction").style.backgroundImage = "url(imgs/background_dark.png)"
 
         // Menu
         if(currentScroll > 400){
@@ -186,7 +186,7 @@ document.querySelector("#bw-button").addEventListener("click", () => {
         darkMode = true;
     }else{
         // Background image
-        document.querySelector("#introduction").style.backgroundImage = "url(C:/xampp/htdocs/develop/portfolio/imgs/background.jpg)"
+        document.querySelector("#introduction").style.backgroundImage = "url(imgs/background.jpg)"
 
         // Menu
         if(currentScroll > 400){
