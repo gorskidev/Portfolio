@@ -11,7 +11,7 @@
     display: block;
     height: auto;
     overflow: hidden;
-    background-image: url(imgs/background.jpg);
+    background-image: url(/imgs/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -323,7 +323,7 @@ footer {
         display: block;
         height: auto;
         overflow: hidden;
-        background-image: url(imgs/background.jpg);
+        background-image: url(/imgs/background.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         color: white;
