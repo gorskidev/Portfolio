@@ -191,7 +191,7 @@
 }
 
 #projects {
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding-bottom: 2rem;
 }
@@ -237,7 +237,7 @@
 }
 
 #about {
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding-bottom: 2rem;
     background: rgb(240, 240, 240);
@@ -299,7 +299,7 @@
 }
 
 #contact {
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding-bottom: 2rem;;
 }
