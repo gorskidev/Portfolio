@@ -87,64 +87,13 @@ if(window.innerWidth > 1024){
             }
         }
     })
-
-    // Menu animations
-    let current = {
-        projects : false,
-        about : false,
-        contact : false
-    }
-
-    document.querySelector(".menu > #nav-projects").addEventListener("click", () => {
-        if(darkMode == true){
-            document.querySelector(".menu > #nav-projects").style.color = "red";
-            document.querySelector(".menu > #nav-about").style.color = "white";
-            document.querySelector(".menu > #nav-contact").style.color = "white";
-        }else{
-            document.querySelector(".menu > #nav-projects").style.color = "red";
-            document.querySelector(".menu > #nav-about").style.color = "black";
-            document.querySelector(".menu > #nav-contact").style.color = "black";
-        }
-        current.projects = true;
-        current.about = false;
-        current.contact = false;
-    });
-
-    document.querySelector(".menu > #nav-about").addEventListener("click", () => {
-        if(darkMode == true){
-            document.querySelector(".menu > #nav-projects").style.color = "white";
-            document.querySelector(".menu > #nav-about").style.color = "red";
-            document.querySelector(".menu > #nav-contact").style.color = "white";
-        }else{
-            document.querySelector(".menu > #nav-projects").style.color = "black";
-            document.querySelector(".menu > #nav-about").style.color = "red";
-            document.querySelector(".menu > #nav-contact").style.color = "black";
-        }
-        current.projects = false;
-        current.about = true;
-        current.contact = false;
-    });
-
-    document.querySelector(".menu > #nav-contact").addEventListener("click", () => {
-        if(darkMode == true){
-            document.querySelector(".menu > #nav-projects").style.color = "white";
-            document.querySelector(".menu > #nav-about").style.color = "white";
-            document.querySelector(".menu > #nav-contact").style.color = "red";
-        }else{
-            document.querySelector(".menu > #nav-projects").style.color = "black";
-            document.querySelector(".menu > #nav-about").style.color = "black";
-            document.querySelector(".menu > #nav-contact").style.color = "red";
-        }
-        current.projects = false;
-        current.about = false;
-        current.contact = true;
-    });
 }
 // Dark mode
 document.querySelector("#bw-button").addEventListener("click", () => {
     if(darkMode === false){
+
         // Background image
-        document.querySelector("#introduction").style.backgroundImage = "url(imgs/background_dark.png)"
+        document.querySelector("#background").style.filter = " grayscale(100%) brightness(50%) contrast(100%)";
 
         // Menu
         if(currentScroll > 400){
@@ -186,15 +135,18 @@ document.querySelector("#bw-button").addEventListener("click", () => {
         darkMode = true;
     }else{
         // Background image
-        document.querySelector("#introduction").style.backgroundImage = "url(imgs/background.jpg)"
-
+        document.querySelector("#background").style.filter = "";
+        
         // Menu
         if(currentScroll > 400){
             document.querySelector("#introduction > .container > .header").style.background = "white";
             document.querySelector("#introduction > .container > .header").style.color = "black";
             document.querySelector("#introduction > .container > .header > #home").style.color = "black";
-
+            for(let i = 0; i < menuButtons.length; i++){
+                menuButtons[i].style.color = "black";
+            }
         }
+        
         document.querySelector("#bw-button").innerHTML = '<i class="fa fa-adjust"></i> dark mode';
 
         // Slide bar toggle button
