@@ -19,7 +19,7 @@ if(window.innerWidth > 1024){
         currentScroll = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
         console.log(currentScroll);
 
-        if(currentScroll > 400){
+        if(currentScroll > 400){ 
             // Container
             document.querySelector("#introduction > .container").style.width = "100%";
 
@@ -49,12 +49,14 @@ if(window.innerWidth > 1024){
         }else if(currentScroll >= 250 && currentScroll <= 400) {
             document.querySelector("#introduction > .container > .header").style.top = "-4rem";
         }else if(currentScroll > 0 && currentScroll < 250) { 
+            
             // Header
             document.querySelector("#introduction > .container > .header").style.background = "";
             document.querySelector("#introduction > .container > .header").style.top = "0rem";
             document.querySelector("#introduction > .container > .header").style.position = "absolute";
             document.querySelector("#introduction > .container > .header").style.color = "white";
             document.querySelector("#introduction > .container > .header").style.boxShadow = "0 0 15px rgb(0, 0, 0, 0)";
+            
             // Menu
             document.querySelector("#introduction > .container > .header > #home").style.color = "white";
             let menuBlock = document.querySelectorAll(".menu > a");
@@ -94,7 +96,8 @@ document.querySelector("#bw-button").addEventListener("click", () => {
 
         // Background image
         document.querySelector("#background").style.filter = " grayscale(100%) brightness(50%) contrast(100%)";
-
+        document.querySelector("body").style.backgroundColor = "#353535";
+        
         // Menu
         if(currentScroll > 400){
             document.querySelector("#introduction > .container > .header > #home").style.color = "white";
@@ -136,6 +139,7 @@ document.querySelector("#bw-button").addEventListener("click", () => {
     }else{
         // Background image
         document.querySelector("#background").style.filter = "";
+        document.querySelector("body").style.backgroundColor = "white";
         
         // Menu
         if(currentScroll > 400){
