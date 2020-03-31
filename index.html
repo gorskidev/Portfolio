@@ -17,7 +17,10 @@
     </head>
     <body>
         <section id="introduction">
-            <div id="background"></div>
+            <div id="background">
+                <div id="character">
+                </div>
+            </div>
             <div class="container">
                 <div class="header">
                     <a id="home" href="#introduction">magodev</a>
@@ -39,18 +42,15 @@
                 </div>
             </div>
             <div class="slide-bar">
+
                 <div class="header">
                     <a>About me</a>
                 </div>
                 <img src="imgs/circled.jpg">
                 <a>Self-taught, dedicated to web development and highly motivated 
-                Junior Front end developer. I am eager to absorb as
-                much knowledge and insight as possible in the pursuance 
-                of my goals, which let’s me stay open to new solutions that will
-                fit into project requirements. Regardless of the day and time, I 
-                am seeking for developing my skills in web development. Able to 
-                function well in high-stress environment.</a>
-                <div class="header">
+                Junior Front end developer. </a>
+
+                <div class="header skills">
                     <a>Skill set</a>
                 </div>
                 <div class="grid">
@@ -70,10 +70,13 @@
                         <a>AngularJS</a>
                     </div>
                     <div class="grid-block">
-                        <a>AJAX</a>
+                        <a>PhaserJS</a>
                     </div>
                     <div class="grid-block">
                         <a>Git</a>
+                    </div>
+                    <div class="grid-block">
+                        <a>AJAX</a>
                     </div>
                     <div class="grid-block">
                         <a>Wordpress</a>
@@ -83,6 +86,27 @@
                     </div>
                     <div class="grid-block">
                         <a>Adobe AI</a>
+                    </div>
+                </div>
+
+                <div class="header contact">
+                    <a>Contact</a>
+                </div>
+                <div class="grid-contact">
+                    <div class="grid-block">
+                        <a href="tel:+48 515 763 871">+48 515 763 871</a>
+                    </div>
+                    <div class="grid-block">
+                        <a href="mailto:magorski99@gmail.com">GMail</a>
+                    </div>
+                    <div class="grid-block">
+                        <a href="https://www.linkedin.com/in/ma-gor/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="grid-block">
+                        <a href="https://github.com/gorskidev" target="_blank">GitHub</a>
+                    </div>
+                    <div class="grid-block">
+                        <a href="https://www.hackerrank.com/maciej_gorski995" target="_blank">Hackerrank</a>
                     </div>
                 </div>
             </div>
@@ -100,7 +124,7 @@
                 <div onclick="location.href='#';" style="cursor: pointer;" class="grid-block">
                     <a class="title">rundom</a>
                     <img src="imgs/project.PNG"/>
-                    <a>Allows you to generate random content for website.</a>
+                    <a>Generate random content for website.</a>
                 </div>
                 <div onclick="window.open('https://gorskidev.github.io/AskMeAQuestion/')" style="cursor: pointer;" class="grid-block">
                     <a class="title">AskMeAQuestion</a>
@@ -122,6 +146,11 @@
                     <img src="imgs/projects/narzedziownia.jpg"/>
                     <a>Wordpress website made for company Reszka 1990.</a>
                 </div>
+                <div onclick="window.open('https://sunnysystem.eu/');" style="cursor: pointer;" class="grid-block">
+                    <a class="title">sunnysystem.eu</a>
+                    <img src="imgs/projects/sunnysystem.jpg"/>
+                    <a>Wordpress website made for company Sunnysystem.</a>
+                </div>
             </div>
         </section>
         <section id="about">
@@ -131,17 +160,26 @@
             <div class="container">
                 <div class="header">
                     <a class="title">Who am I?</a>
-                    <a class="subtitle">I am a programmer</a>
+                    <div class="subtitle">
+                        <a>I am</a>
+                        <div>
+                            <ul id="i-am-carousel">
+                                <li><a id="i-am-photographer">a photographer.</a></li>
+                                <li><a id="i-am-photographer">a graphic designer.</a></li>
+                                <li><a id="i-am-artist">an artist.</a></li>
+                                <li><a id="i-am-programmer">a programmer.</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="description">
                     <img src="imgs/me.jpg"/>
-                    <a>Self-taught, dedicated to web development and highly motivated 
+                    <a>Hi there! I'm self-taught, dedicated to web development and highly motivated 
                         Junior Front end developer. I am eager to absorb as
                         much knowledge and insight as possible in the pursuance 
                         of my goals, which let’s me stay open to new solutions that will
                         fit into project requirements. Regardless of the day and time, I 
-                        am seeking for developing my skills in web development. Able to 
-                        function well in high-stress environment.</a>
+                        am seeking to develop my skills in web development. </a>
                 </div>
                 <div class="header">
                     <a class="title">What technologies do I use?</a>
@@ -173,15 +211,15 @@
                         <img src="imgs/technologies/bootstrap.png"/>
                     </div>
                 </div>
-                <div class="header">
+                <div class="header" id="hobbies-header">
                     <a class="title">Also, I am an artist</a>
                 </div>
-                <div class="description">
-                    <img src="imgs/technologies/soundcloud.png" />
+                <div class="description" id="hobbies-description">
+                    <img class="clickable" onclick="window.open('https://soundcloud.com/maciek-gorski-481963319');" src="imgs/technologies/soundcloud.png" />
                     <a>My life wouldn’t be the same without my hobbies. I love art, in every form. 
                         In my freetime I am a passionate photographer. Taking pictures let’s me save exact moment of life on a paper.
                         Which is amazing! Besides photography, I love making music. I am musician, guitarist, to be more precisely.
-                        I do have my own SoundCloud profile and if you are interested in checking it out, here is a link!</a>
+                        I do have my own SoundCloud profile. Check it out, here is a <a href="https://soundcloud.com/maciek-gorski-481963319">link!</a></a>
                 </div>
             </div>
         </section>
@@ -195,7 +233,6 @@
                     <a href="mailto: magorski99@gmail.com"><strong>Email</strong>:</strong> magorski99@gmail.com</a>
                     <a href="tel:+48515763871"><strong>Phone</strong>: +48 515 763 871</a>
                     <a href="http://www.linkedin.com/in/ma-gor" target="_blank">LinkedIn</a>
-                    <a>Twitter</a>
                 </div>
             </div>
         </section>
@@ -204,4 +241,6 @@
         </footer>
         <script type="text/javascript" src="js/interactives.js"></script> 
     </body>
+    <script>
+    </script>
 </html>
