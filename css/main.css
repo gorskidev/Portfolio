@@ -459,8 +459,7 @@ footer {
     text-align: center;
 }
 
-
-/* Mobile */
+/* // Mobile // */
 
 @media only screen and (max-width: 1024px){
     * {
@@ -506,7 +505,6 @@ footer {
         transition: top 1s, box-shadow .5s;
         z-index: 9999;
         box-shadow: 0 0 15px rgb(0, 0, 0, 0);
-
     }
     
     #introduction > .container > .header > #home {
@@ -520,6 +518,24 @@ footer {
         padding-left: 2rem;
         cursor: pointer;
         transition: all 0.001s step-end;
+    }
+
+    .fix-position-button {
+        position: fixed;
+        margin-left: -8rem !important;
+        font-size: 2rem;
+        color: black;
+        animation: slidedown 1s 1 alternate ease-out forwards .1s;
+        width: 4rem;
+        height: 2.3rem;
+        background-color: white;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    @keyframes slidedown {
+        0%  {margin-top: 0rem;}
+        100% { margin-top: 5rem;}
     }
     
     .menu {

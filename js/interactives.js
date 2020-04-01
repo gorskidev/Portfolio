@@ -138,6 +138,16 @@ if (window.innerWidth > 1024){
             }
         }
     })
+} else {
+    document.addEventListener('scroll', () => {
+        currentScroll = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        console.log(currentScroll)
+        if (currentScroll > (document.querySelector("html > body > section:nth-of-type(2) > div:nth-of-type(1)").offsetTop)){
+            document.querySelector("#bw-button").classList.add("fix-position-button")
+        } else {
+            document.querySelector("#bw-button").classList.remove("fix-position-button")
+        }
+    })
 }
 // Dark mode
 document.querySelector("#bw-button").addEventListener("click", () => {
