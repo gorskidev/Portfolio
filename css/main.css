@@ -686,6 +686,7 @@ footer {
         padding-bottom: 2rem;
         background: rgb(240, 240, 240);
         transition: color .1s;
+        overflow: hidden;
     }
     
     #about > .header {
@@ -745,7 +746,11 @@ footer {
     #hobbies-header {
         margin-top: 0;
     }
-    
+
+    #i-am-carousel {
+        margin-top: -6.15rem !important;
+    }
+
     #contact {
         max-width: 100rem;
         margin: 0 auto;
